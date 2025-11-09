@@ -1380,11 +1380,17 @@
   .family-info-groom p {
     font-size: 0.85rem;
     margin: 3px 0;
+    line-height: 1.2;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   .family-info-bride p:last-child,
   .family-info-groom p:last-child {
     font-size: 0.75rem;
+    line-height: 1.1;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   /* QR Modal Mobile */
@@ -1646,19 +1652,19 @@
   .family-info-groom p {
     font-size: 0.72rem !important;
     margin: 1px 0 !important;
-    line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.1;
+    white-space: normal;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   .family-info-bride p:last-child,
   .family-info-groom p:last-child {
     font-size: 0.68rem !important;
     white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
-    line-height: 1.1;
+    word-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.05;
   }
 
   .bride-photo,
