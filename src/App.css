@@ -1366,8 +1366,11 @@
   .family-info-bride,
   .family-info-groom {
     text-align: center;
-    flex: 1;
-    max-width: 190px;
+    flex: 1 1 0;
+    max-width: 50%;
+    width: 50%;
+    padding: 0 5px;
+    box-sizing: border-box;
   }
 
   .family-info-bride h4,
@@ -1632,10 +1635,12 @@
 
   .family-info-bride,
   .family-info-groom {
-    flex: 1 1 auto !important;
+    flex: 1 1 0 !important;
     min-width: 0 !important;
-    max-width: none !important;
-    overflow: hidden;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding: 0 3px !important;
+    box-sizing: border-box !important;
   }
 
   .family-info-bride h4,
@@ -1766,9 +1771,12 @@
 
 .family-info-bride,
 .family-info-groom {
-  flex: 1;
+  flex: 1 1 0;
   text-align: center;
-  max-width: 200px;
+  max-width: 50%;
+  width: 50%;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .family-divider {
