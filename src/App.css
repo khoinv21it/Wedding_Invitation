@@ -502,7 +502,7 @@
 }
 
 .event-card p {
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   color: var(--text-dark);
   margin: 15px 0;
   line-height: 1.7;
@@ -840,25 +840,41 @@
   grid-template-columns: 1fr 1fr;
   gap: 15px;
   margin-top: 10px;
+  align-items: stretch;
+}
+
+.form-buttons .submit-rsvp-button,
+.form-buttons .gift-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: auto !important;
+  min-height: 56px !important;
+  padding: 18px 30px !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  flex: 1 !important;
 }
 
 .submit-rsvp-button {
-  padding: 18px 30px;
-  background: white;
-  color: #333;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: white !important;
+  color: #555 !important;
+  border: 2px solid #ddd !important;
+  box-shadow: 0 4px 15px rgba(212, 165, 165, 0.3) !important;
 }
 
 .submit-rsvp-button:hover:not(:disabled) {
-  background: #f5f5f5;
+  background: #f8f8f8;
+  border-color: #bbb;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(212, 165, 165, 0.4);
 }
 
 .submit-rsvp-button:disabled {
@@ -867,16 +883,14 @@
 }
 
 .gift-button {
-  padding: 18px 30px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, #ef7575 100%);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 165, 165, 0.3);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    #ef7575 100%
+  ) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(212, 165, 165, 0.3) !important;
 }
 
 .gift-button:hover {
@@ -1316,21 +1330,61 @@
     margin: 8px 0 15px 0;
   }
 
-  .bride-photo,
-  .groom-photo {
-    width: 140px;
-    height: 140px;
-    border: 4px solid var(--primary-color);
-    min-width: 100px;
+  /* Family Info Simple Responsive */
+  .family-info-simple {
+    flex-direction: row;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 20px 15px;
+    min-height: 100px;
   }
 
-  .amount-presets {
-    grid-template-columns: repeat(2, 1fr);
+  .family-divider {
+    margin: 0 10px;
+    height: 60px;
+    gap: 3px;
   }
 
-  .preset-button {
-    padding: 12px 8px;
-    font-size: 0.9rem;
+  .love-letters {
+    height: 25px;
+    width: 25px;
+  }
+
+  .love-letter {
+    font-size: 1.1rem;
+  }
+
+  .divider-line {
+    width: 25px;
+    height: 1px;
+  }
+
+  .divider-ornament {
+    font-size: 0.8rem;
+  }
+
+  .family-info-bride,
+  .family-info-groom {
+    text-align: center;
+    flex: 1;
+    max-width: 180px;
+  }
+
+  .family-info-bride h4,
+  .family-info-groom h4 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .family-info-bride p,
+  .family-info-groom p {
+    font-size: 0.85rem;
+    margin: 3px 0;
+  }
+
+  .family-info-bride p:last-child,
+  .family-info-groom p:last-child {
+    font-size: 0.75rem;
   }
 
   /* QR Modal Mobile */
@@ -1548,6 +1602,37 @@
     margin: 6px 0 12px 0;
   }
 
+  /* Family Info Simple Responsive Mobile */
+  .family-info-simple {
+    gap: 12px;
+    margin: 12px 0;
+    padding: 18px 12px;
+    min-height: 90px;
+  }
+
+  .family-info-bride,
+  .family-info-groom {
+    flex: 1;
+    max-width: 150px;
+  }
+
+  .family-info-bride h4,
+  .family-info-groom h4 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .family-info-bride p,
+  .family-info-groom p {
+    font-size: 0.8rem;
+    margin: 3px 0;
+  }
+
+  .family-info-bride p:last-child,
+  .family-info-groom p:last-child {
+    font-size: 0.75rem;
+  }
+
   .bride-photo,
   .groom-photo {
     width: 110px;
@@ -1565,176 +1650,39 @@
   }
 
   .event-card p {
-    font-size: 0.95rem;
-  }
-
-  .countdown-section,
-  .family-info-section,
-  .gallery-section,
-  .event-details-section,
-  .map-section,
-  .qr-section {
-    padding: 50px 15px;
-  }
-}
-
-@media (max-width: 375px) {
-  .couple-names {
-    font-size: 1.5rem;
-  }
-
-  .wedding-date {
     font-size: 0.9rem;
   }
 
-  .section-title {
-    font-size: 1.3rem;
+  /* Family Info Simple Responsive Small Mobile */
+  .family-info-simple {
+    gap: 8px;
+    margin: 10px 0;
+    padding: 15px 8px;
+    min-height: 80px;
   }
 
-  .section-title::after {
-    width: 60px;
+  .family-info-bride,
+  .family-info-groom {
+    flex: 1;
+    max-width: 120px;
   }
 
-  /* Gallery ultra mobile */
-  .gallery-slider-wrapper {
-    max-width: 96%;
-    padding: 12px 30px;
-    margin: 25px auto 0;
+  .family-info-bride h4,
+  .family-info-groom h4 {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
   }
 
-  .gallery-grid-3 {
-    gap: 10px;
+  .family-info-bride p,
+  .family-info-groom p {
+    font-size: 0.75rem;
+    margin: 2px 0;
   }
 
-  .gallery-item-box {
-    aspect-ratio: 3/4;
+  .family-info-bride p:last-child,
+  .family-info-groom p:last-child {
+    font-size: 0.7rem;
   }
-
-  .slider-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 1rem;
-  }
-
-  .slider-dots {
-    margin-top: 15px;
-    gap: 5px;
-  }
-
-  .slider-dots .dot {
-    width: 6px;
-    height: 6px;
-  }
-
-  .slider-dots .dot.active {
-    width: 15px;
-  }
-
-  .family-card {
-    padding: 25px 15px;
-  }
-
-  .bride-groom-photos {
-    gap: 15px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .bride-photo,
-  .groom-photo {
-    width: 100px;
-    height: 100px;
-    border: 3px solid var(--primary-color);
-    min-width: 80px;
-  }
-
-  .event-card {
-    padding: 30px 20px;
-  }
-
-  .event-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .event-card p {
-    font-size: 0.9rem;
-  }
-
-  .qr-container {
-    padding: 25px 15px;
-  }
-}
-
-/* Extra Small Screens */
-@media (max-width: 360px) {
-  .gallery-carousel-wrapper {
-    padding: 0 35px;
-  }
-
-  .gallery-nav-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 1.4rem;
-  }
-
-  .gallery-image-card img {
-    height: 250px;
-  }
-
-  .indicator-dot {
-    width: 6px;
-    height: 6px;
-  }
-
-  .indicator-dot.active {
-    width: 16px;
-  }
-
-  .bride-groom-photos {
-    gap: 12px;
-    margin: 15px 0 8px 0;
-  }
-
-  .event-card .heart-icon {
-    font-size: 1.6rem;
-    margin: 5px 0 10px 0;
-  }
-
-  .bride-photo,
-  .groom-photo {
-    width: 90px;
-    height: 90px;
-    border: 2px solid var(--primary-color);
-    min-width: 70px;
-  }
-}
-
-/* Form buttons responsive */
-.form-buttons {
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-
-.submit-rsvp-button,
-.gift-button {
-  padding: 15px 25px;
-  font-size: 1rem;
-}
-
-/* QR Modal responsive */
-.qr-modal-content {
-  padding: 30px 20px;
-  max-width: 95%;
-}
-
-.qr-modal-title {
-  font-size: 1.6rem;
-}
-
-.qr-amount-presets {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
 }
 
 /* Ultra Small Screens */
@@ -1768,4 +1716,188 @@
   .event-card p {
     font-size: 0.85rem;
   }
+
+  /* Family Divider Ultra Small */
+  .family-divider {
+    margin: 10px 0;
+    height: 40px;
+    gap: 2px;
+  }
+
+  .love-letters {
+    height: 22px;
+    width: 22px;
+  }
+
+  .love-letter {
+    font-size: 1rem;
+  }
+
+  .divider-line {
+    width: 20px;
+    height: 1px;
+  }
+
+  .divider-ornament {
+    font-size: 0.7rem;
+  }
+}
+
+/* Family Info Simple */
+.family-info-simple {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 25px 0 35px;
+  padding: 10px 20px;
+  /* background: rgba(255, 255, 255, 0.865); */
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(212, 165, 165, 0.15);
+  border: 1px solid rgba(212, 165, 165, 0.1);
+  min-height: 120px;
+  flex-wrap: nowrap !important;
+}
+
+.family-info-bride,
+.family-info-groom {
+  flex: 1;
+  text-align: center;
+  max-width: 200px;
+}
+
+.family-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  height: 80px;
+  position: relative;
+  flex-direction: row;
+}
+
+/* Divider Lines - Vertical lines on both sides like the old heart design */
+.family-divider::before,
+.family-divider::after {
+  content: "";
+  width: 1.5px;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--primary-color) 20%,
+    #d4af37 50%,
+    var(--primary-color) 80%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  animation: pulse 2s ease-in-out infinite alternate;
+}
+
+/* LOVE Letters Animation - Sequential Display */
+.love-letters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.984);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(212, 165, 165, 0.2);
+}
+
+.love-letter {
+  position: absolute;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  opacity: 0;
+  transform: translate(-50%, 20px);
+  text-shadow: 0 1px 3px rgba(212, 165, 165, 0.3);
+  font-family: "Great Vibes", cursive;
+  left: 50%;
+  top: 50%;
+  animation: slideUpLetter 8s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Each letter appears at different times with 2 second delay */
+.love-letter:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.love-letter:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.love-letter:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.love-letter:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes slideUpLetter {
+  0%,
+  22% {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.8);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+  30%,
+  45% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -80px) scale(0.9);
+  }
+  55%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -120px) scale(0.7);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+    transform: scaleY(0.9);
+    box-shadow: 0 0 5px rgba(212, 165, 165, 0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    box-shadow: 0 0 15px rgba(212, 165, 165, 0.6);
+  }
+}
+
+.family-info-bride h4,
+.family-info-groom h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.family-info-bride p,
+.family-info-groom p {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.family-info-bride p:last-child,
+.family-info-groom p:last-child {
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 0.85rem;
 }

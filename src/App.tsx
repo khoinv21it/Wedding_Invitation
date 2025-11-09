@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 import HeroSection from "./components/HeroSection";
 import CountdownSection from "./components/CountdownSection";
-import FamilyInfoSection from "./components/FamilyInfoSection";
+// import FamilyInfoSection from "./components/FamilyInfoSection";
 import GallerySection from "./components/GallerySection";
 import EventDetailsSection from "./components/EventDetailsSection";
 import RSVPSection from "./components/RSVPSection";
@@ -42,7 +42,7 @@ function App() {
       <MusicPlayer />
       <HeroSection />
       <CountdownSection />
-      <FamilyInfoSection />
+      {/* <FamilyInfoSection /> */}
       <GallerySection />
       <EventDetailsSection />
       <RSVPSection />

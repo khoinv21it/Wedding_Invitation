@@ -36,7 +36,7 @@ export const weddingData = {
   venue: {
     name: "Nhà Hàng Tiệc Cưới Thịnh Phát",
     address: "98 Hùng Vương, Tam Kỳ, TP. Đà Nẵng",
-    floor: "Sảnh Tầng 3",
+    floor: "Sảnh Tầng 2",
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15373.687962900527!2d108.45641434192662!3d15.56908658707388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3169dcde651ba12b%3A0xc08d55b86d48a34f!2zTmjDoCBIw6BuZyBU4buVIENo4bupYyBUaeG7h2MgQ8aw4bubaSBUaOG7i25oIFBow6F0!5e0!3m2!1svi!2s!4v1759407873143!5m2!1svi!2s",
   },
