@@ -71,4 +71,4 @@ export default defineConfig([
   },
 ])
 ```
-# Wedding_Intivation
+# Wedding_Invitation
