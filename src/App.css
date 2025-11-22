@@ -840,41 +840,25 @@
   grid-template-columns: 1fr 1fr;
   gap: 15px;
   margin-top: 10px;
-  align-items: stretch;
-}
-
-.form-buttons .submit-rsvp-button,
-.form-buttons .gift-button {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: auto !important;
-  min-height: 56px !important;
-  padding: 18px 30px !important;
-  font-size: 1.05rem !important;
-  font-weight: 600 !important;
-  border-radius: 10px !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  text-align: center !important;
-  line-height: 1 !important;
-  box-sizing: border-box !important;
-  width: 100% !important;
-  flex: 1 !important;
 }
 
 .submit-rsvp-button {
-  background: white !important;
-  color: #555 !important;
-  border: 2px solid #ddd !important;
-  box-shadow: 0 4px 15px rgba(212, 165, 165, 0.3) !important;
+  padding: 18px 30px;
+  background: white;
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .submit-rsvp-button:hover:not(:disabled) {
-  background: #f8f8f8;
-  border-color: #bbb;
+  background: #f5f5f5;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 165, 165, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .submit-rsvp-button:disabled {
@@ -883,14 +867,16 @@
 }
 
 .gift-button {
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    #ef7575 100%
-  ) !important;
-  color: white !important;
-  border: none !important;
-  box-shadow: 0 4px 15px rgba(212, 165, 165, 0.3) !important;
+  padding: 18px 30px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #ef7575 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 165, 165, 0.3);
 }
 
 .gift-button:hover {
@@ -1332,17 +1318,19 @@
 
   /* Family Info Simple Responsive */
   .family-info-simple {
-    flex-direction: row;
-    gap: 15px;
+    flex-direction: row !important;
+    gap: 10px;
     margin: 15px 0;
-    padding: 20px 15px;
-    min-height: 100px;
+    padding: 15px 10px;
+    flex-wrap: nowrap !important;
   }
 
   .family-divider {
-    margin: 0 10px;
-    height: 60px;
+    margin: 0 5px;
+    height: 50px;
     gap: 3px;
+    flex-shrink: 0;
+    min-width: 35px;
   }
 
   .love-letters {
@@ -1366,11 +1354,9 @@
   .family-info-bride,
   .family-info-groom {
     text-align: center;
-    flex: 1 1 0;
-    max-width: 50%;
-    width: 50%;
-    padding: 0 5px;
-    box-sizing: border-box;
+    max-width: none;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .family-info-bride h4,
@@ -1383,17 +1369,11 @@
   .family-info-groom p {
     font-size: 0.85rem;
     margin: 3px 0;
-    line-height: 1.2;
-    word-wrap: break-word;
-    hyphens: auto;
   }
 
   .family-info-bride p:last-child,
   .family-info-groom p:last-child {
     font-size: 0.75rem;
-    line-height: 1.1;
-    word-wrap: break-word;
-    hyphens: auto;
   }
 
   /* QR Modal Mobile */
@@ -1613,63 +1593,28 @@
 
   /* Family Info Simple Responsive Mobile */
   .family-info-simple {
-    gap: 8px !important;
+    gap: 8px;
     margin: 12px 0;
-    padding: 15px 8px;
-    min-height: 90px;
+    padding: 12px 8px;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
   }
 
-  .family-divider {
-    margin: 0 5px !important;
-    height: 50px !important;
-    flex-shrink: 0 !important;
-    min-width: 25px !important;
-  }
-
-  .love-letters {
-    height: 20px !important;
-    width: 20px !important;
-  }
-
-  .family-info-bride,
-  .family-info-groom {
-    flex: 1 1 0 !important;
-    min-width: 0 !important;
-    max-width: 50% !important;
-    width: 50% !important;
-    padding: 0 3px !important;
-    box-sizing: border-box !important;
-  }
-
   .family-info-bride h4,
   .family-info-groom h4 {
-    font-size: 0.8rem !important;
-    margin-bottom: 5px !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
   }
 
   .family-info-bride p,
   .family-info-groom p {
-    font-size: 0.72rem !important;
-    margin: 1px 0 !important;
-    line-height: 1.1;
-    white-space: normal;
-    word-wrap: break-word;
-    hyphens: auto;
+    font-size: 0.8rem;
+    margin: 3px 0;
   }
 
   .family-info-bride p:last-child,
   .family-info-groom p:last-child {
-    font-size: 0.68rem !important;
-    white-space: normal;
-    word-wrap: break-word;
-    hyphens: auto;
-    line-height: 1.05;
+    font-size: 0.75rem;
   }
 
   .bride-photo,
@@ -1692,7 +1637,31 @@
     font-size: 0.9rem;
   }
 
-  /* Family Info Simple Responsive Small Mobile - REMOVED TO AVOID OVERRIDE */
+  /* Family Info Simple Responsive Small Mobile */
+  .family-info-simple {
+    gap: 5px;
+    margin: 10px 0;
+    padding: 10px 5px;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .family-info-bride h4,
+  .family-info-groom h4 {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+
+  .family-info-bride p,
+  .family-info-groom p {
+    font-size: 0.75rem;
+    margin: 2px 0;
+  }
+
+  .family-info-bride p:last-child,
+  .family-info-groom p:last-child {
+    font-size: 0.7rem;
+  }
 }
 
 /* Ultra Small Screens */
@@ -1756,27 +1725,21 @@
 /* Family Info Simple */
 .family-info-simple {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 25px 0 35px;
-  padding: 10px 20px;
-  /* background: rgba(255, 255, 255, 0.865); */
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 25px rgba(212, 165, 165, 0.15);
-  border: 1px solid rgba(212, 165, 165, 0.1);
-  min-height: 120px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 20px 0;
+  padding: 0;
   flex-wrap: nowrap !important;
+  overflow: hidden;
 }
 
 .family-info-bride,
 .family-info-groom {
-  flex: 1 1 0;
+  flex: 1 1 auto;
   text-align: center;
-  max-width: 50%;
-  width: 50%;
-  padding: 0 10px;
-  box-sizing: border-box;
+  min-width: 0;
+  max-width: none;
 }
 
 .family-divider {
@@ -1815,7 +1778,7 @@
   height: 30px;
   width: 30px;
   position: relative;
-  background: rgba(255, 255, 255, 0.984);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   box-shadow: 0 2px 10px rgba(212, 165, 165, 0.2);
 }
@@ -1831,47 +1794,47 @@
   font-family: "Great Vibes", cursive;
   left: 50%;
   top: 50%;
-  animation: slideUpLetter 8s infinite ease-in-out;
+  animation: slideUpLetter 5s infinite ease-in-out;
   pointer-events: none;
 }
 
-/* Each letter appears at different times with 2 second delay */
+/* Each letter appears at different times with 1.25 second delay */
 .love-letter:nth-child(1) {
   animation-delay: 0s;
 }
 
 .love-letter:nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 1.25s;
 }
 
 .love-letter:nth-child(3) {
-  animation-delay: 4s;
+  animation-delay: 2.5s;
 }
 
 .love-letter:nth-child(4) {
-  animation-delay: 6s;
+  animation-delay: 3.75s;
 }
 
 @keyframes slideUpLetter {
   0%,
-  22% {
+  18% {
     opacity: 0;
     transform: translate(-50%, 20px) scale(0.8);
   }
-  25% {
+  20% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.15);
+    transform: translate(-50%, -50%) scale(1.1);
   }
-  30%,
-  45% {
+  22%,
+  23% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
-  50% {
-    opacity: 0.8;
+  24% {
+    opacity: 1;
     transform: translate(-50%, -80px) scale(0.9);
   }
-  55%,
+  25%,
   100% {
     opacity: 0;
     transform: translate(-50%, -120px) scale(0.7);

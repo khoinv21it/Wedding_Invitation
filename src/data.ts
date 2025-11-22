@@ -16,7 +16,7 @@ export const weddingData = {
   weddingDate: {
     date: "23.11.2025",
     time: "10 Giờ 30 Chủ Nhật",
-    fullDateTime: "2025-11-29T07:20:00", // For countdown
+    fullDateTime: "2025-11-23T10:30:00", // For countdown
     lunarDate: "Nhằm ngày 04 tháng 10 năm Ất Tỵ",
   },
 
